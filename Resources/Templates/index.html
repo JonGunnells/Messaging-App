@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+Hello {{name}}
+<br>
+<br>
+<form action="/logout" method="post">
+    <button type="submit">Logout</button>
+</form>
+
+
+
+<ol>
+    {{#users}}
+    <Li>{{name}}</Li>
+    {{/users}}
+</ol>
+</body>
+</html>
