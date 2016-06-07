@@ -1,6 +1,5 @@
 package com.theironyard;
 
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import spark.ModelAndView;
 import spark.Spark;
 import spark.template.mustache.MustacheTemplateEngine;
@@ -11,8 +10,8 @@ import java.util.HashMap;
 
 public class Main {
 
-    static com.theironyard.user user;
-    static ArrayList<BIConversion.User> userList = new ArrayList<>();
+    static User user;
+    static ArrayList<User> userList = new ArrayList<>();
 
     public static void main(String[] args) {
         Spark.init();
@@ -37,7 +36,7 @@ public class Main {
                 "/login",
                 (request, response) -> {
                     String username = request.queryParams("username");
-                    user = new user(username);
+                    user = new User(username);
                     userList.add(user);
                     response.redirect("/");
                     return "";

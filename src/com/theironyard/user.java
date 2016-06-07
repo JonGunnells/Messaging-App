@@ -1,10 +1,10 @@
 package com.theironyard;
 
 
-public class user {
+public class User {
     String name;
 
-    public user(String name) {
+    public User(String name) {
         this.name = name;
     }
 }
