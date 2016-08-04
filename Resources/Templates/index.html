@@ -1,23 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
+<html>
 <body>
-Hello {{name}}
-<br>
-<br>
-<form action="/logout" method="post">
-    <button type="submit">Logout</button>
+<form action = "/create-user" method="post">
+    <input type="text" name="username" placeholder="Enter your name"/>
+    <input type="password" name="password" placeholder="Password"/>
+    <button type="submit">Login</button>
 </form>
-
-
-
-<ol>
-    {{#users}}
-    <Li>{{name}}</Li>
-    {{/users}}
-</ol>
 </body>
 </html>

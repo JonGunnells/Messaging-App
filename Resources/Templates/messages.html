@@ -1,0 +1,34 @@
+<html>
+<body>
+
+<form action="/create-message" method="post">
+    <input type="text" name="message" placeholder="Write a message"/>
+    <button type="submit">Submit</button>
+</form>
+
+Hello {{name}}
+<br>
+
+<ol>
+    {{#messages}}
+    <li>{{message}}</li>
+    {{/messages}}
+</ol>
+
+<br>
+<form action="/edit-message" method="post">
+    <input type="number" name="editid" placeholder="Message to edit"/>
+    <input type="text" name="edit" placeholder="Edited text"/>
+    <button type="submit">Edit</button>
+</form>
+<br>
+<form action="/delete-message" method="post">
+    <input type="number" name="id" placeholder="#"/>
+    <button type="submit">Delete</button>
+</form>
+<br>
+<form action="/logout" method="post">
+    <button type="submit">Logout</button>
+</form>
+</body>
+</html>
